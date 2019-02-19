@@ -4,7 +4,7 @@
   "main": "./lib",
   "license": "MIT",
   "scripts": {
-    "start": "npm run build && micro",
+    "start": "npm run build && micro -l tcp://0.0.0.0:$PORT",
     "build": "rimraf lib && tsc",
     "dev": "npm run build && concurrently \"tsc --watch\" \"micro-dev\"",
     "dev-start": "npm run build && micro-dev",
