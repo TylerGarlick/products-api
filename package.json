@@ -16,7 +16,8 @@
     "micro": "^9.1.4",
     "microrouter": "^3.1.2",
     "nedb-promise": "^2.0.1",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "typescript": "^2.8.1"
   },
   "devDependencies": {
     "@types/micro": "^7.3.3",
@@ -26,7 +27,6 @@
     "micro-dev": "^2.2.2",
     "prettier": "^1.12.1",
     "tslint": "^5.9.1",
-    "tslint-config-blvd": "github:blvdgroup/tslint-config-blvd",
-    "typescript": "^2.8.1"
+    "tslint-config-blvd": "github:blvdgroup/tslint-config-blvd"
   }
 }
