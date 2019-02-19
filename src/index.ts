@@ -8,7 +8,7 @@ import { products } from './services'
 
 
 
-const routes = router(
+export default router(
 
   get('/', async (req, res) => {
     return await products.all()
@@ -39,8 +39,3 @@ const routes = router(
     return await products.deleteById(id)
   })
 )
-
-const PORT = process.env.PORT || 5000
-const server = micro(routes)
-
-server.listen(PORT)
