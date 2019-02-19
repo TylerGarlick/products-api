@@ -1,4 +1,5 @@
-import { send, json } from 'micro'
+import { json } from 'micro'
+import micro from 'micro'
 import { router, get, post, put, patch, del } from 'microrouter'
 
 import { products } from './services'
@@ -7,7 +8,7 @@ import { products } from './services'
 
 
 
-export default router(
+const routes = router(
 
   get('/', async (req, res) => {
     return await products.all()
@@ -38,3 +39,8 @@ export default router(
     return await products.deleteById(id)
   })
 )
+
+const PORT = process.env.PORT || 5000
+const server = micro(routes)
+
+server.listen(PORT)
